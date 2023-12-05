@@ -1,0 +1,90 @@
+/* set */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* custem input file */
+.file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 300px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload::before {
+    content: "Upload";
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    font-size: large;
+    border-right: 5px solid #aaf;
+    transition: all 0.3s ease-in-out;
+}
+
+.file-upload:hover::before {
+    width: 300px;
+}
+
+.file-upload::after {
+    content: "or Drag and Drop";
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    border-left: 1px solid #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.file-upload:hover::after {
+    width: 300px;
+}
+
+/* custem canvas link the input file */
+canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
